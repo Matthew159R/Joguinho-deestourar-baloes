@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+
+.ballon {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+    animation: ballon-animation 0.8s forwards;
+}
+
+.ballonImgred {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    animation: ballon-animation 0.8s forwards;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/imgs/among-us-red.png');
+}
+.ballonImgyellow {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    animation: ballon-animation 0.8s forwards;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/imgs/among-us-yellow.png');
+}
+.ballonImgblack {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    animation: ballon-animation 0.8s forwards;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/imgs/among-us-black.png');
+}
+
+@keyframes ballon-explose {
+    from {
+        transform: scale(5);
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(9);
+        background-color: white;
+    }
+}
+
+@keyframes ballon-animation {
+    from {
+        transform: scale(1)
+    }
+    
+    to {
+       transform: scale(5);
+    }
+}
+
+@keyframes ballon-animation-reverse {
+    from {
+        transform: scale(5)
+    }
+    
+    to {
+       transform: scale(1);
+    }
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-screen {
+    width: 80%;
+    height: 80%;
+    background-color: blue;
+    margin: 0 0 50px 0;
+    border-radius: 20px;
+    position: relative;
+    border-top: solid 30px rgb(58, 92, 156);
+}
+
+.scoreboard {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 300px 20px 300px;
+    background-color: rgb(36, 36, 97);
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+
+.config-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.config-container h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.config img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.config {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: blue;
+    height: 80%;
+    width: 30%;
+    border-radius: 10px;
+    position: absolute;
+    animation: config-onload-animation  1s forwards;
+}
+
+@keyframes config-onload-animation {
+    0% {
+        top: -500px;
+    }
+    
+    50% {
+        top: 100px;
+    }
+
+    100% {
+        top: 80px;
+    }
+}
+
+@keyframes config-playGame-animation {
+    0% {
+        top: 80px;
+    }
+
+    20% {
+        top: 100px;
+    }
+
+    100% {
+        top: -1000px;
+    }
+}
+
+.select-difficulty {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.select-difficulty button {
+    font-size: 25px;
+    color: white;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    border-radius: 10px;
+    border: solid 2px aqua;
+    cursor: pointer;
+}
+
+.easy {
+    background-color: green;
+}
+.medium {
+    background-color: rgb(153, 153, 0);
+}
+.hard {
+    background-color: rgb(121, 0, 0);
+}
+
+.select-ballon-skin {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.select-ballon-skin img {
+    cursor: pointer;
+
+}
+
+.select-difficulty button:hover {
+    animation:  buttons-animation 0.5s forwards;
+}
+
+@keyframes buttons-animation {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+
+.among-us-black, .among-us-yellow, .among-us-red {
+    position: relative;
+}
+
+.speak-ballon {
+    background-color: white;
+    position: absolute;
+    height: 100px;
+    width: 120px;
+    border-radius: 50px;
+    top: -110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 20px;
+    display: none;
+}
+
+.speak-ballon p {
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.border-select {
+    border: solid 2px red;
+}
+
+.conteiner-button-play button {
+    background-color: red;
+    color: white;
+    width: 180px;
+    height: 40px;
+    border: solid 1px aqua;
+    border-radius: 2px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.conteiner-button-play:hover {
+    animation: buttons-animation 0.5s forwards;
+}
+
+.button-select {
+    background-color: blue;
+}
+
+.timer-container {
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(135deg, green 85%, black 15%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-container p {
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+
+
+.button-replay {
+    width: 300px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    border: solid 2px aqua;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+
+.button-replay:hover {
+    animation: buttons-animation 0.5s forwards;
+}
+
+@keyframes button-replay-animation {
+    from {
+        top: -100px;
+    }
+    
+    to {
+        top: 400px;
+    }
+}
+

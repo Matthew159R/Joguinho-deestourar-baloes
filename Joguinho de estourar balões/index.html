@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <button class="button-replay">Recomeçar</button>
+
+        <div class="scoreboard">
+            <p class="hits">Acertos: <span>0</span></p>
+            <p class="difficulty">Dificuldade: Difícil</p>
+            <p class="mistakes">Erros: <span>0</span></p>
+        </div>
+
+        <div class="timer-container">
+            <p class="timer">Tempo: <span>0</span></p>
+        </div>
+
+
+        <div class="game-screen"></div>
+
+    </div>
+
+    <div class="config-container">
+
+        <div class="config">
+
+            <div class="select-difficulty">
+                <h2>Escolha a dificuldade</h2>
+
+                <button class="easy">Fácil</button>
+                <button class="medium">Médio</button>
+                <button class="hard">Difícil</button>
+            </div>
+
+            <h2>Escolha a skin do balão</h2>
+            <div class="select-ballon-skin">
+
+                <div class="among-us-black">
+                    <div class="speak-ballon">
+                        <p class="speak-black">Por favor não me exploda :c</p>
+                    </div>
+                    <img src="/imgs/among-us-black.png" class="skin black" alt="">
+                </div>
+
+                <div class="among-us-red">
+                    <div class="speak-ballon">
+                        <p class="speak-black">Você nunca vai me pegar!</p>
+                    </div>
+                    <img src="/imgs/among-us-red.png" class="skin red" alt="">
+                </div>
+
+                <div class="among-us-yellow">
+                    <div class="speak-ballon">
+                        <p class="speak-black">Quer tentar a sorte?!</p>
+                    </div>
+                    <img src="/imgs/among-us-yellow.png" class="skin yellow" alt="">
+                </div>
+            </div>
+
+            <div class="conteiner-button-play">
+                <button>Começar!</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
